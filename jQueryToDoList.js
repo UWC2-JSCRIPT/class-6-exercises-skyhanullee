@@ -13,8 +13,11 @@ const doneListItem = (function(e) {
 * Delete element when delete link clicked
 */
 const deleteListItem = function(e) {
-let $this = $(this);
-$this.parent().remove();
+  let $this = $(this);
+  $this.fadeOut("normal", function() {
+    $this.parent().remove();
+  });
+  
 };
 
 /**
@@ -74,3 +77,4 @@ $doneItem.click(doneListItem);
 // listener for delete
 const $deleteItem = $('.delete');
 $deleteItem.click(deleteListItem);
+
