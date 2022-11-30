@@ -14,7 +14,7 @@ const doneListItem = (function(e) {
 */
 const deleteListItem = function(e) {
   let $this = $(this);
-  $this.fadeOut("normal", function() {
+  $this.parent().fadeOut("normal", function() {
     $this.parent().remove();
   });
   
